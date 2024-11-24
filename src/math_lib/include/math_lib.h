@@ -69,4 +69,14 @@ namespace MathLib
 
     // Function to search GCD
     int GCD(int a, int b);
+
+    // Function to calculate the third angle of a triangle
+    double calculateThirdAngle(double angle1, double angle2)
+    {
+        if (angle1 <= 0 || angle2 <= 0 || angle1 + angle2 >= 180)
+        {
+            throw std::invalid_argument("Angles must be positive, and their sum must be less than 180.");
+        }
+        return 180.0 - (angle1 + angle2);
+    }
 }
